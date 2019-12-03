@@ -1,0 +1,31 @@
+form {
+    width: 70%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #0034ff;
+    border-radius: 20px;
+    background-color: #90b2ff;
+    margin: auto;
+    padding: 25px 50px;
+    text-align: center;
+    box-shadow: 8px 8px 3px #1e52ee;
+}
+
+input[type=text] {
+    width: 40%;
+}
+
+label {
+    color: #0a15b5;
+}
+
+button {
+    width: 10%;
+    border-style: outset;
+    border-color: #2b2bff;
+    border-radius: 10px;
+    background-color: #4ec5ff;
+    color: #0034ff;
+    padding: 3px;
+    margin: 0 0 0 50px;
+}
