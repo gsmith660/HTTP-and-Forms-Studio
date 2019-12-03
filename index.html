@@ -5,7 +5,14 @@
 	<script>
 		// TODO: create a handler
 		function setSearchEngine() {
-			console.log('setSearchEngine function was called!');
+			let selectedEngine = document.querySelector('input[name=engine]:checked').value;
+			let actions = {
+				'google': 'https://www.google.com/search',
+				'duckDuckGo': 'https://duckduckgo.com/',
+				'bing': 'https://www.bing.com/search',
+				'ask': 'https://www.ask.com/web'
+			};
+			return actions[selectedEngine];
 		}
 
     	window.addEventListener("load", function(){
@@ -13,7 +20,9 @@
 			let form = document.getElementById('searchForm');
 
 			form.addEventListener('submit', function() {
-				setSearchEngine();
+				let searchQuery = document.querySelector('input[name=q]').value;
+				console.log(setSearchEngine() + '?q=' + searchQuery);
+				form.setAttribute('action', setSearchEngine() + '?q=' + searchQuery);
 			});
     	});
 	</script>
